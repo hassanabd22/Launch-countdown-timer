@@ -1,0 +1,129 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Text', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: hsl(234, 17%, 12%);
+    background-image: url(../images/bg-stars.svg);
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: hsl(0, 0%, 100%);
+    margin-top: 150px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+h2 {
+    font-size: 62px;
+    color: hsl(345, 95%, 68%);
+}
+
+p {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: hsl(237, 18%, 59%);
+}
+
+.container {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -70px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 20%;
+    
+}
+
+
+.box .number {
+    background-color: hsl(236, 21%, 26%);
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    position: relative;
+    border-radius: 5px;
+    transform: scaleY(10deg);
+}
+
+.box .number::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    left: -7.5px;
+    border-radius: 50%;
+}
+
+.box .number::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    right: -7.5px;
+    border-radius: 50%;
+}
+
+
+.icon {
+    background-image: url(../images/pattern-hills.svg);
+    height: 20%;
+    width: 100%;
+    text-align: center;
+}
+
+.icon img {
+    margin-top: 80px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+@media (max-width:800px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+       
+        text-transform: uppercase;
+        letter-spacing: normal;
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 42px;
+    }
+
+    p {
+        letter-spacing: normal;
+    }
+    
+    .box .number {
+        height: 80px;
+    }
+}
